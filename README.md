@@ -1,10 +1,16 @@
 # cn-funds-mcp
 
-China fund & stock data MCP server powered by EastMoney API.
+China fund & stock data MCP server powered by EastMoney free API. No API key required.
 
-基金/股票数据 MCP 服务，基于东方财富(EastMoney) API 提供数据查询能力。
+基金/股票数据 MCP 服务，基于东方财富(EastMoney) 免费 API 提供数据查询能力，无需配置 API Key，开箱即用。
 
 **作者**: [smallke](https://github.com/smallke) | **邮箱**: smallkes@qq.com
+
+## 截图预览 / Screenshots
+
+| 持仓收益查询 | 定时收益播报 | 定时提醒设置 |
+|:---:|:---:|:---:|
+| ![持仓收益](screenshot/1.png) | ![收益播报](screenshot/2.png) | ![定时提醒](screenshot/3.png) |
 
 ## MCP 工具列表
 

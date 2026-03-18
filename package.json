@@ -1,7 +1,7 @@
 {
   "name": "cn-funds-mcp",
   "version": "0.1.0",
-  "description": "China fund & stock data MCP server (基金/股票数据 MCP 服务)",
+  "description": "China fund & stock data MCP server, free API, no API key required (基金/股票数据 MCP 服务，免费接口，无需配置 API Key)",
   "author": "smallke <smallkes@qq.com> (https://github.com/smallke)",
   "homepage": "https://github.com/smallke",
   "license": "MIT",
@@ -19,6 +19,8 @@
     "net-value",
     "capital-flow",
     "northbound",
+    "free-api",
+    "no-api-key",
     "基金",
     "股票",
     "A股",

@@ -1,9 +1,9 @@
 ---
 name: cn-funds-mcp
 description: >-
-  China fund & stock data assistant. Query fund valuation, NAV, holdings, manager info,
-  stock/index quotes, market capital flow, sector ranking, northbound capital, and manage
-  user's fund portfolio with profit calculation via cn-funds-mcp tools.
+  China fund & stock data assistant (free API, no API key required). Query fund valuation,
+  NAV, holdings, manager info, stock/index quotes, market capital flow, sector ranking,
+  northbound capital, and manage user's fund portfolio with profit calculation via cn-funds-mcp tools.
   中国基金/股票数据查询助手。使用 cn-funds-mcp 工具查询基金估值、净值、持仓、经理信息，
   查询股票/指数行情，查看大盘资金流向、板块排行、北向资金，以及管理用户的基金持仓并计算收益。
   当用户提及基金、股票、大盘、持仓、收益、净值、估值、北向资金等关键词时使用。
@@ -124,6 +124,16 @@ description: >-
 ### 用户告知持仓信息
 
 解析出基金代码、份额、成本价，逐只调用 `save_portfolio` 保存。名称参数可省略，工具会自动查询填充。
+
+### 用户想快速导入持仓（截图识别）
+
+如果当前模型支持图片识别（OCR），主动提示用户：可以直接上传基金APP（如天天基金、支付宝、蚂蚁财富等）的持仓截图，AI 会自动识别图片中的基金代码、基金名称、持有份额、成本净值等信息，然后逐只调用 `save_portfolio` 批量导入持仓，无需手动逐个输入。
+
+处理流程：
+1. 识别截图中的每只基金信息（代码、份额、成本价）
+2. 对于识别不完整的字段（如只有名称没有代码），用 `search_fund` 补全基金代码
+3. 逐只调用 `save_portfolio` 保存
+4. 保存完成后汇总展示已导入的持仓列表，并提示用户确认是否有遗漏或错误
 
 ### 用户问某只基金的全面分析
 
